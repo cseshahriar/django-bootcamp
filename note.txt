@@ -1,0 +1,37 @@
+
+after install python:
+-----------------------------
+create dev folder :
+cd ~/
+mkdir dev
+
+> pip install virtualenv
+
+verify:
+> pip freeze
+virtualenv==15.1.0
+
+------------ venv ------------
+# windows 
+pip install virtualenv
+pip install virtualenvwrapper-win
+mkvirtualenv myenv1
+lsvirtualenv 
+workon myFirstEnv 
+pip install django==2.2
+django-admin --version 
+    navigate to where to install django project from venv_folder 
+django-admin startproject projectname 
+
+or 
+
+conda create --name envName django
+conda create --name envName python=3.8 
+conda info --envs 
+active envname / source active envname  
+conda deactivate  
+------------- django install ------
+conda install django /  pip install django
+django-admin startproject first_project 
+----------- project run -----------
+python manage.py runserver 
