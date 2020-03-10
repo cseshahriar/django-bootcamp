@@ -23,15 +23,32 @@ django-admin --version
     navigate to where to install django project from venv_folder 
 django-admin startproject projectname 
 
+loc: E:\shahriar\django_bootcamp\first_project 
 or 
 
-conda create --name envName django
-conda create --name envName python=3.8 
-conda info --envs 
-active envname / source active envname  
-conda deactivate  
+Ubuntu:
+#install python pip 
+sudo apt-get install python-pip
+#install python virtualenv
+sudo apt-get install python-virtualenv
+# create virtual env 
+virtualenv  myenv
+#activate the virtualenv
+C:\Dev firstenv\Scripts\activate
+
+#install django inside virtualenv
+pip install django
+#create a new django project
+django-admin.py startproject mysite
+#enter to the folder of the new django project
+cd mysite
+#run the django project
+python manage.py runserver 
+
 ------------- django install ------
 conda install django /  pip install django
 django-admin startproject first_project 
 ----------- project run -----------
 python manage.py runserver 
+---------- app -------------
+python manage.py startapp firstapp  
