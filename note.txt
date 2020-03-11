@@ -74,3 +74,6 @@ python manage.py createsuperuser
 -------- shell ------ ----------
 python manage.py shell 
 ----register model in admin.py----
+admin.site.register(model)
+----- faker ---
+pip install faker 
