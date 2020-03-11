@@ -17,7 +17,7 @@ pip install virtualenv
 pip install virtualenvwrapper-win
 mkvirtualenv myenv1
 lsvirtualenv 
-workon myFirstEnv 
+workon myFirstEnv  
 pip install django==2.2
 django-admin --version 
     navigate to where to install django project from venv_folder 
@@ -52,3 +52,25 @@ django-admin startproject first_project
 python manage.py runserver 
 ---------- app -------------
 python manage.py startapp firstapp  
+--------- create superuser ------
+python manage.py createsuperuser 
+------- postgresql -----
+pip install psycopg2 
+
+'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'djbootcamp', 
+    'USER': 'postgres',
+    'PASSWORD': 'admin',
+    'HOST': 'localhost',
+    'PORT': '5432'
+
+# relation must on_delete 
+on_delete=models.CASCADE
+
+python manage.py makemigrations 
+python manage.py migrate 
+-------- createsuperuser-------
+python manage.py createsuperuser 
+-------- shell ------ ----------
+python manage.py shell 
+----register model in admin.py----
