@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django level tow</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Hi welcome to Django level two!</h1> 
+    <h2>Here are yours access records: </h2>
+
+    <div class="djangotwo">
+        {% if users %} 
+        <table class="table">
+            <thead>
+                <th>Name</th>
+                <th>Email</th>
+            </thead>
+            <tbody>
+                <!-- webpages list -->
+                {% for user in users %} 
+                <tr>
+                    <td>{{ user.first_name }} {{ user.last_name}}</td> 
+                    <td>{{ user.email }}</td> 
+                </tr> 
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>No access recored found!</p>
+        {% endif %}
+    </div>
+</body>
+</html>
