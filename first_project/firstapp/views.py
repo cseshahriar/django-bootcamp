@@ -1,8 +1,9 @@
 from django.shortcuts import render
+from firstapp.models import Topic, Webpage, AccessRecord
 
 # Create your views here.
-def index(request):
-    data = {
-        'insert_me' : 'lorem ipsum'
-    }
-    return render(request, 'firstapp/index.html', data)   
+def index(request):  
+    webpage_list = AccessRecord.objects.order_by('date')
+    date_dict = {'access_records': webpage_list} 
+    return render(request, 'firstapp/index.html', context=date_dict)   
+ 

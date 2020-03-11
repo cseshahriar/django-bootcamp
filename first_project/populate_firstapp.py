@@ -11,7 +11,7 @@ from faker import Faker
 
  
 fakegen = Faker()
-topics = ['Search', 'Social', 'Marketplace', 'New', 'Games']
+topics = ['Search', 'Social', 'Marketplace', 'News', 'Games']
 
 def add_topic():
     t = Topic.objects.get_or_create(topic_name=random.choice(topics))[0]
