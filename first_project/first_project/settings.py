@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'secondapp',
     'thirdapp',
     'apptwo',  
+    'fourthapp', 
 ]
 
 MIDDLEWARE = [
