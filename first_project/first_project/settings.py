@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'apptwo',  
     'fourthapp', 
     'basicform',  
-    'bootstrap4'
+    'bootstrap4',
+    'basicapp', 
 ]
 
 MIDDLEWARE = [

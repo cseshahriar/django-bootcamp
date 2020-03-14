@@ -18,6 +18,7 @@ from django.urls import path, include
 from apptwo import views 
 from fourthapp import views
 from basicform import views
+from basicapp import views
 
 urlpatterns = [
     path('', include('firstapp.urls')), 
@@ -26,5 +27,6 @@ urlpatterns = [
     path('', include('thirdapp.urls')),  
     path('', include('fourthapp.urls')),    
     path('', include('basicform.urls')),      
+    path('', include('basicapp.urls')),      
     path('admin/', admin.site.urls),  
 ]
