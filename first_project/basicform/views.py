@@ -7,7 +7,7 @@ def index(request):
 
 
 # generate a form view  
-def form_name_view(request):
+def form_name_view(request): 
     form = forms.FormName() # instance of FormName class 
 
     if request.method == 'POST':
