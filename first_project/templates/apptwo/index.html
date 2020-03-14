@@ -13,7 +13,8 @@
                 <h1 class="display-4">Welcome!</h1>
                 <hr class="my-4">
                 <p class="lead">Go to user sugnup!</p> 
-                <a class="btn btn-primary btn-lg" href="/apptwo/users" role="button">Signup</a> 
+                <!-- django relative url mapping  -->
+                <a class="btn btn-primary btn-lg" href="{% url 'apptwo-form' %}" role="button">Signup</a>  
             </div> 
         </div>
     </div>
