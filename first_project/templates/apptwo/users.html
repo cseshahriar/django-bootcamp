@@ -6,31 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Django level tow</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% load bootstrap4 %}
+
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
 </head>
 <body>
-    <h1>Hi welcome to Django level two!</h1> 
-    <h2>Here are yours access records: </h2>
+    
+    <div class="container mt-5">
+        {% bootstrap_messages %}
+        {{form.errors }}
+        <h1>Please fill out the form!</h1>
 
-    <div class="djangotwo">
-        {% if users %} 
-        <table class="table">
-            <thead>
-                <th>Name</th>
-                <th>Email</th>
-            </thead>
-            <tbody>
-                <!-- webpages list -->
-                {% for user in users %} 
-                <tr>
-                    <td>{{ user.first_name }} {{ user.last_name}}</td> 
-                    <td>{{ user.email }}</td> 
-                </tr> 
-                {% endfor %}
-            </tbody>
-        </table>
-        {% else %}
-        <p>No access recored found!</p>
-        {% endif %}
+        <form action="/apptwo/users/" method="POST" class="form">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            <!-- field wize -->
+            <!-- <div class="form-group">
+                <label for="">
+                    {{form.first_name.label_tag }}
+                </label>
+                {{form.first_name }}
+            </div> -->
+                
+
+            {% buttons %}
+                <button type="submit" class="btn btn-primary"> Submit</button>
+            {% endbuttons %}
+        </form> 
     </div>
+
 </body>
 </html>
