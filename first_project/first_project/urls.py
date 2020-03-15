@@ -28,5 +28,6 @@ urlpatterns = [
     path('', include('fourthapp.urls')),    
     path('', include('basicform.urls')),      
     path('', include('basicapp.urls')),      
+    path('', admin.site.urls),  
     path('admin/', admin.site.urls),  
 ]

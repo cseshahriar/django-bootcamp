@@ -1,9 +1,9 @@
 from django import template
 
-# custom filter 
-register = template.library() 
+register = template.Library()
+ 
 
-@register.filter('cut')
+@register.filter('cut') 
 
 def cut(value, arg):
     """
