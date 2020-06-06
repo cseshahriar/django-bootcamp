@@ -1,5 +1,5 @@
 beautifulsoup4==4.8.2
-Django==2.2.9
+Django==2.2.13
 django-bootstrap4==1.1.1
 Faker==4.0.1
 psycopg2==2.8.4
